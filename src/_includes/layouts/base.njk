@@ -9,6 +9,12 @@
     <h1>{{ title }}</h1>
     <p><a href="https://github.com/philhawksworth/test-11ty-tags">https://github.com/philhawksworth/test-11ty-tags</a></p>
     <hr />
+    <h2>Tags</h2>
+    <ul>
+    {%- for tag in tags -%}
+      <li>{{tag}}</li>
+    {% endfor -%}
+    </ul>
     {{ content | safe }}
   </body>
 </html>
